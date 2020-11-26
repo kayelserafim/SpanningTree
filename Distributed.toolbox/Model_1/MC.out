@@ -1,0 +1,117 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.09 of 28 January 2016
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running in Model-Checking mode with 2 workers.
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file MC.tla
+Parsing file Distributed.tla
+Parsing file /snap/tlaplus/2/toolbox/plugins/org.lamport.tlatools_1.0.0.201701200352/tla2sany/StandardModules/TLC.tla
+Parsing file /snap/tlaplus/2/toolbox/plugins/org.lamport.tlatools_1.0.0.201701200352/tla2sany/StandardModules/Integers.tla
+Parsing file /snap/tlaplus/2/toolbox/plugins/org.lamport.tlatools_1.0.0.201701200352/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /snap/tlaplus/2/toolbox/plugins/org.lamport.tlatools_1.0.0.201701200352/tla2sany/StandardModules/Naturals.tla
+Parsing file SpanTree.tla
+Parsing file /snap/tlaplus/2/toolbox/plugins/org.lamport.tlatools_1.0.0.201701200352/tla2sany/StandardModules/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module SpanTree
+Semantic processing of module Distributed
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2020-11-29 05:44:57)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 1 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2111:1 @!@!@
+Evaluating invariant Safety failed.
+@!@!@ENDMSG 2111 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ dist = (n1 :> 0 @@ n2 :> 6 @@ n3 :> 6 @@ n4 :> 6 @@ n5 :> 6)
+/\ msgs = {[orig |-> n1, dest |-> n1, dist |-> 0]}
+/\ mom = (n1 :> n1 @@ n2 :> n2 @@ n3 :> n3 @@ n4 :> n4 @@ n5 :> n5)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Action line 68, col 13 to line 71, col 62 of module Distributed>
+/\ dist = (n1 :> 0 @@ n2 :> 1 @@ n3 :> 6 @@ n4 :> 6 @@ n5 :> 6)
+/\ msgs = {[orig |-> n1, dest |-> n1, dist |-> 0], [orig |-> n2, dest |-> n1, dist |-> 1]}
+/\ mom = (n1 :> n1 @@ n2 :> n1 @@ n3 :> n3 @@ n4 :> n4 @@ n5 :> n5)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Action line 68, col 13 to line 71, col 62 of module Distributed>
+/\ dist = (n1 :> 0 @@ n2 :> 1 @@ n3 :> 1 @@ n4 :> 6 @@ n5 :> 6)
+/\ msgs = { [orig |-> n1, dest |-> n1, dist |-> 0],
+  [orig |-> n2, dest |-> n1, dist |-> 1],
+  [orig |-> n3, dest |-> n1, dist |-> 1] }
+/\ mom = (n1 :> n1 @@ n2 :> n1 @@ n3 :> n1 @@ n4 :> n4 @@ n5 :> n5)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Action line 68, col 13 to line 71, col 62 of module Distributed>
+/\ dist = (n1 :> 0 @@ n2 :> 1 @@ n3 :> 1 @@ n4 :> 2 @@ n5 :> 6)
+/\ msgs = { [orig |-> n1, dest |-> n1, dist |-> 0],
+  [orig |-> n2, dest |-> n1, dist |-> 1],
+  [orig |-> n3, dest |-> n1, dist |-> 1],
+  [orig |-> n4, dest |-> n2, dist |-> 2] }
+/\ mom = (n1 :> n1 @@ n2 :> n1 @@ n3 :> n1 @@ n4 :> n2 @@ n5 :> n5)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Action line 68, col 13 to line 71, col 62 of module Distributed>
+/\ dist = (n1 :> 0 @@ n2 :> 1 @@ n3 :> 1 @@ n4 :> 2 @@ n5 :> 2)
+/\ msgs = { [orig |-> n1, dest |-> n1, dist |-> 0],
+  [orig |-> n2, dest |-> n1, dist |-> 1],
+  [orig |-> n3, dest |-> n1, dist |-> 1],
+  [orig |-> n4, dest |-> n2, dist |-> 2],
+  [orig |-> n5, dest |-> n3, dist |-> 2] }
+/\ mom = (n1 :> n1 @@ n2 :> n1 @@ n3 :> n1 @@ n4 :> n2 @@ n5 :> n3)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2020-11-29 05:44:58
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 12 to line 47, col 32 of module Distributed: 1179
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 20 to line 69, col 49 of module Distributed: 1179
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 20 to line 70, col 49 of module Distributed: 1179
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(5) at 2020-11-29 05:44:58: 1183 states generated (64.821 s/min), 798 distinct states found (43.726 ds/min), 699 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+1183 states generated, 798 distinct states found, 699 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 5.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 01s at (2020-11-29 05:44:58)
+@!@!@ENDMSG 2186 @!@!@
